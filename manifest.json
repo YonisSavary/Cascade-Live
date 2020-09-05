@@ -11,13 +11,18 @@
   
     "permissions": [
       "activeTab",
-      "storage"
+      "storage",
+      "menus"
     ],
+
+    "background": {
+      "scripts": ["./src/_contextMenu.js"]
+    },
 
     "content_scripts": [
       {
         "matches": ["<all_urls>"],
-        "js": ["./src/cascade_background.js"]
+        "js": ["./src/_autoload.js"]
       }
     ],
 

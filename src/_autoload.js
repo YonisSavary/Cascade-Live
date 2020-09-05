@@ -1,3 +1,4 @@
+
 browser.storage.local.get("autoload").then((data, err)=>
 {
     if (err) console.log(err);
