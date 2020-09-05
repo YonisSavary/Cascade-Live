@@ -48,7 +48,7 @@ function refresh()
     let rules = cssInput.value;
     const O_rules = rules; // original rules before modifications
     rules = rules.replace(/\n/gi,"").replace(/\/\*[^\*]*\*\//gi,"")
-    if (rules.match(cssRegex) === null && validationCheck.value == "on") 
+    if (rules.match(cssRegex) === null && validationCheck.checked) 
     {
         validationSpan.style.color = "red";
         validationSpan.innerText = "your CSS is not valid";
