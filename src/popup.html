@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="popup_style.css">
+    <title>Cascade Live - Extension Popup</title>
+</head>
+<body>
+    <div class="f-centered">
+        <span class="header">Cascade Live</span>
+        <div id="addRulesDiv" class="f-column container">
+            <span class="category-title">Custom CSS</span>
+            <textarea id="cssCode" cols="30" rows="10"></textarea>
+            <div class="f-row category">
+                <button id="refreshButton" class="blue-button">Apply</button>
+                <button id="saveButton" class="gray-button">Save</button>
+                <div class="f-row f-centered f-fill">
+                    <span id="validationSpan" class="small"></span>
+                </div>
+            </div>
+            <div class="f-row category">
+                <input type="checkbox" checked id="validationCheck">
+                <label for="validationCheck">CSS Validation Needed</label>
+            </div>
+        </div>
+    </div>
+    <script src="./_live.js"></script>
+</body>
+</html>
