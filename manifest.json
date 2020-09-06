@@ -19,19 +19,12 @@
       "scripts": ["./src/_contextMenu.js"]
     },
 
-    "content_scripts": [
-      {
-        "matches": ["<all_urls>"],
-        "js": ["./src/_autoload.js"]
-      }
-    ],
-
     "browser_action": {
       "default_icon": {
         "19": "icons/cascade-19.png",
         "38": "icons/cascade-38.png"
       },
       "default_title": "Cascade Live",
-      "default_popup": "./src/cascade.html"
+      "default_popup": "./src/popup.html"
     }
   }
