@@ -16,7 +16,7 @@
     ],
 
     "background": {
-      "scripts": ["./src/_contextMenu.js"]
+      "scripts": ["./src/contextMenu.js"]
     },
 
     "browser_action": {

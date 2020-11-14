@@ -30,9 +30,9 @@ async function getCSSFromElement(info, tab)
 browser.menus.create({
     id: "cascade-edit",
     title: "Edit with Cascade Live",
-    contexts: ["page", "link"]
+    contexts: ["page", "link", "all"]
   });
-   
+
 browser.menus.onClicked.addListener(async function (info, tab) {
     if (info.menuItemId == "cascade-edit") {
         getCSSFromElement(info, tab).then( data => 
@@ -45,9 +45,7 @@ browser.menus.onClicked.addListener(async function (info, tab) {
         })
         .catch(err =>
         {
-            /**
-             * Usually a cross-origin error
-             */
+            // Usually a cross-origin error
             browser.tabs.executeScript(tab.id, {
                 frameId: info.frameId,
                 code: `alert('Error on CSS fetch, sorry :( \\n\\n${err}')`
